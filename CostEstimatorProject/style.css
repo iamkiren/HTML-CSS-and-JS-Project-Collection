@@ -1,0 +1,300 @@
+body {
+    background-color: rgb(233, 223, 255);
+    color: rgb(44, 44, 44);
+    font-family: 'Open Sans', sans-serif;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(83, 49, 156);
+    margin: 32px 0 64px 0;
+}
+
+.container {
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 64px 64px 64px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(200, 175, 255);
+    padding: 16px;
+    margin: 0 0 32px 0;
+}
+
+.tabs p {
+    padding: 8px;
+}
+
+.tabs p:hover {
+    color: rgb(83, 49, 156);
+    cursor: pointer;
+}
+
+.tabs p.active {
+    color: rgb(83, 49, 156);
+    position: relative;
+}
+
+.tabs .active::before {
+    content: "";
+    height: 4px;
+    width: 200%;
+    background-color: rgb(83, 49, 156);
+    position: absolute;
+    bottom: -32px;
+    left: -50%;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    position: absolute;
+    top: 98px;
+}
+
+.toggle-wrapper {
+    display: flex;
+}
+
+.toggle-wrapper img {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toggle {
+    background-color: rgb(83, 49, 156);
+    height: 32px;
+    width: 140px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 4px 0 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.toggle span:first-of-type {
+    color: white;
+}
+
+.toggle span:last-of-type {
+    background-color: white;
+    color: rgb(83, 49, 156);
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+.session-card {
+    background-color: rgb(250, 247, 255);
+    text-align: center;
+    padding: 32px;
+    width: 50%;
+    text-transform: uppercase;
+    margin: 16px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.session-card p {
+    color: rgb(44, 44, 44);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16 0 0 0;
+}
+
+.session-card .number {
+    color: rgb(83, 49, 156);
+    font-size: 54px;
+    margin: 0;
+}
+
+.description {
+    line-height: 32px;
+    margin: 16px 0 32px 0;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.slider .bar {
+    width: 100%;
+    height: 16px;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 20px;
+}
+
+.slider .progress {
+    width: 31%;
+    height: 18px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(53, 10, 74, 1) 36%, rgba(83, 49, 156, 1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.point {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: rgb(89, 49, 156);
+    border: 2px solid white;
+    position: absolute;
+    top: -5px;
+    left: 29%;
+    transition: 0.15s transform ease;
+}
+
+.point:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.scale {
+    width: 100%;
+}
+
+.scale ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    font-weight: bold;
+    color: rgb(166, 166, 166);
+}
+
+.card-wrapper {
+    display: flex;
+}
+
+.card {
+    background-color: rgb(250, 247, 255);
+    border-radius: 10px;
+    margin: 16px;
+    padding: 16px 32px;
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: rgb(83, 49, 156);
+    transition: 0.15s transform ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card .top-section {
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.card .top-section p {
+    margin: 4px 0;
+}
+
+.card .price {
+    font-size: 42px;
+    color: rgb(44, 44, 44);
+}
+
+.card hr {
+    width: 30%;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 2px;
+}
+
+.card button {
+    background-color: rgb(83, 49, 156);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 8px 0;
+    font-weight: bold;
+    transition: 0.15s transform ease;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+}
+
+.card .save-header {
+    color: white;
+    background: linear-gradient(90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(53, 10, 74, 1) 36%,
+            rgba(83, 49, 156, 1) 100%);
+    width: 100%;
+    position: absolute;
+    top: -24px;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    .card {
+        width: 100%;
+    }
+
+    .card-wrapper {
+        flex-wrap: wrap-reverse;
+    }
+
+    .session-card {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .session-card {
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    .toggle-wrapper {
+        width: 90%;
+        justify-content: space-around;
+    }
+}
